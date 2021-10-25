@@ -1,0 +1,16 @@
+# Nodejs
+node_modules/
+npm-debug.*
+/yarn.lock
+/package-lock.json
+/pnpm-lock.yaml
+
+/dist
+/packed
+
+# Mac OS X
+.DS_Store
+
+# my temporary test file
+/_test_.js
+/_test_.html
