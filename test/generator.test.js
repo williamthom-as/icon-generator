@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import { md5 } from './generator';
+import { md5 } from '../src/index';
 
 describe('md5', () => {
   it('should return md5 from str', () => {
