@@ -5,13 +5,14 @@
   "scripts": {
     "init": "mkdir dist",
     "clean": "rm -rf dist",
-    "prebuild": "npm run clean && npm run init && ncc build src/index.js -m -e crypto-js -o packed",
+    "prebuild": "npm run clean && npm run init && ncc build src/index.js -m -e crypto-js -e color -o packed",
     "build": "babel packed/index.js -o dist/index.js",
     "pretest": "npm run build",
     "test": "mocha --require @babel/register ./test/**/*.test.js",
     "start": "npm run dev",
     "dev": "npm test -- -w",
-    "lint": "eslint src"
+    "lint": "eslint src",
+    "local": "browserify _test_.js -o bundle.js"
   },
   "author": "william",
   "license": "MIT",
@@ -31,6 +32,7 @@
     "dist"
   ],
   "dependencies": {
-    "crypto-js": "^4.1.1"
+    "crypto-js": "^4.1.1",
+    "color": "^4.0.1"
   }
 }
