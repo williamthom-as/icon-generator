@@ -1,10 +1,9 @@
 import { MD5 } from "crypto-js";
-import { Color } from "color";
 
 export function generateMD5(str) {
   if (!str) return null;
   return MD5(str, 128).toString()
-}
+};
 
 export function extractColorPalette(string) {
   const md5 = generateMD5(string);
@@ -16,4 +15,4 @@ export function extractColorPalette(string) {
   }
 
   return colorArr;
-}
+};
