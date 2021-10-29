@@ -16,3 +16,21 @@ export function extractColorPalette(string) {
 
   return colorArr;
 };
+
+export function extractPatternSequencing(string) {
+  const md5 = generateMD5(string);
+  const decArr = [];
+
+  for (let idx = 0; idx < (md5.length / 2); idx++) {
+    let sub = md5.substring(idx * 2, (idx + 1) * 2)
+    decArr.push(parseInt(sub, 16))
+  }
+
+  const numPerGroups = 4;
+  const result = new Array(numPerGroups)
+    .fill('')
+    .map((_, i) => decArr.slice(i * numPerGroups, (i + 1) * numPerGroups));
+
+
+  return result;
+}

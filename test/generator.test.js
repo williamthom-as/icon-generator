@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import { generateMD5, extractColorPalette } from '../src/index';
+import { generateMD5, extractColorPalette, extractPatternSequencing } from '../src/index';
 
 describe('generateMD5', () => {
   it('should return md5 from str', () => {
@@ -14,5 +14,12 @@ describe('generateMD5', () => {
 describe('extractColorPalette', () => {
   it('should return md5 from str', () => {
     expect(extractColorPalette('mystr').length).to.be.greaterThan(0)
+  });
+});
+
+describe('extractPatternSequencing', () => {
+  it('should return array of decimals from str', () => {
+    let arr = extractPatternSequencing('mystr');
+    expect(arr.length).to.be.greaterThan(0)
   });
 });

@@ -4,8 +4,8 @@ export function createBasicRectangle(width, height, x, y, fill) {
   rect.setAttributeNS(null, "width", width);
   rect.setAttributeNS(null, "height", height);
 
-  if (x) rect.setAttributeNS(null, "x", x);
-  if (y) rect.setAttributeNS(null, "y", y);
+  if (x != null) rect.setAttributeNS(null, "x", x);
+  if (y != null) rect.setAttributeNS(null, "y", y);
 
   rect.setAttributeNS(null, "fill", fill);
 
